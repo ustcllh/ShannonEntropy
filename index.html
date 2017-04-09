@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ShannonEntropy</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown >
+					<script type="text/template">
+						# Shannon Entropy
+						Lihan Liu
+						$$\frac{1}{1 + e^{-x}}$$
+					</script>
+				</section>
+				<section data-background-color="#222222">
+					<div style="float:left;width:50%">
+						<p data-markdown style="text-align:left;font-size:28px">
+							Claude Elwood Shannon was an American mathematician, electrical engineer, and cryptographer known as "the father of information theory".
+
+							Shannon Entropy was introduced in a landmark paper, A mathematical Theory of Communication, published in 1948.
+
+							Shannon is noted for having founded information theory.
+						</p>
+						<p style="text-align:left;font-size:28px">
+							Wikipedia:
+							<a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a>.
+							<br>
+							Image:
+							<a href="http://www.newyorker.com/tech/elements/claude-shannon-the-father-of-the-information-age-turns-1100100"> The New Yorker</a>.
+						</p>
+					</div>
+					<div style="float:right;width:40%">
+						<img src="http://www.newyorker.com/wp-content/uploads/2016/04/Roberts-Claude-Shannon-782.jpg">
+					</div>
+
+				</section>
+
+				<section>
+					<h6>Entropy in Statistical Thermodynamics</h6>
+					<div style="float:left;width:49%;font-size:24px">
+						<div data-markdown style="text-align:center">
+							Boltzmann entropy formula
+
+							$\sigma=log\ g$
+						</div>
+						<div data-markdown style="text-align:left">
+							In Boltzmann's definition, entropy is a measure of the number of possible microstates of a system in **thermodynamic equilibrium**.
+						</div>
+
+					</div>
+
+					<div style="float:right;width:49%;font-size:24px">
+						<div data-markdown style="text-align:center">
+						Gibbs entropy formula
+
+						$ s = - \sum_{i}^{} p_i \ log\ p_i $
+						</div>
+						<div data-markdown style="text-align:left">
+							A general form, used to identify the entropy of a system. The microstates of such a thermodynamic system are **not equally probable**.
+						</div>
+					</div>
+
+					<div data-markdown style="font-size:24px">
+						In equilibrium, all microstates are equally likely, so we obtain with
+						$ p_i = \frac{1}{g}$
+
+						\begin{align}
+						 s & = -  \sum_{1}^{g} \frac{1}{g} log\ \frac{1}{g} =-log\ \frac{1}{g} \\\\
+						 & =\sigma
+						\end{align}
+					</div>
+
+				</section>
+				<section>
+					Shannon Entropy or Information Entropy
+					<div data-markdown>
+						$H=- \sum_{i}^{} p_i \ log_b \ p_i$
+
+						If $b=2$, the unit of entropy is bit.
+					</div>
+
+				</section>
+
+				<section data-background-image="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg">
+					<h2>Image</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: false,
+				slideNumber: true,
+				math: {
+					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
