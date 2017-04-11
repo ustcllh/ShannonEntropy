@@ -7,6 +7,7 @@
 		<title>ShannonEntropy</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
@@ -28,7 +29,7 @@
 					<script type="text/template">
 						# Shannon Entropy
 						Lihan Liu
-						$$\frac{1}{1 + e^{-x}}$$
+						
 					</script>
 				</section>
 				<section data-background-color="#222222">
@@ -36,7 +37,7 @@
 						<p data-markdown style="text-align:left;font-size:28px">
 							Claude Elwood Shannon was an American mathematician, electrical engineer, and cryptographer known as "the father of information theory".
 
-							Shannon Entropy was introduced in a landmark paper, A mathematical Theory of Communication, published in 1948.
+							Shannon Entropy was introduced in a landmark paper, *A mathematical Theory of Communication*, published in 1948.
 
 							Shannon is noted for having founded information theory.
 						</p>
@@ -51,44 +52,39 @@
 					<div style="float:right;width:40%">
 						<img src="http://www.newyorker.com/wp-content/uploads/2016/04/Roberts-Claude-Shannon-782.jpg">
 					</div>
-
 				</section>
 
 				<section>
 					<h6>Entropy in Statistical Thermodynamics</h6>
+					<div>
 					<div style="float:left;width:49%;font-size:24px">
 						<div data-markdown style="text-align:center">
 							Boltzmann entropy formula
 
 							$\sigma=log\ g$
-						</div>
-						<div data-markdown style="text-align:left">
+
 							In Boltzmann's definition, entropy is a measure of the number of possible microstates of a system in **thermodynamic equilibrium**.
 						</div>
-
 					</div>
-
 					<div style="float:right;width:49%;font-size:24px">
-						<div data-markdown style="text-align:center">
+						<div data-markdown style="text-align:center" >
 						Gibbs entropy formula
 
 						$ s = - \sum_{i}^{} p_i \ log\ p_i $
-						</div>
-						<div data-markdown style="text-align:left">
-							A general form, used to identify the entropy of a system. The microstates of such a thermodynamic system are **not equally probable**.
+
+						A general form, used to identify the entropy of a system. The microstates of such a thermodynamic system are **not equally probable**.
 						</div>
 					</div>
-
-					<div data-markdown style="font-size:24px">
-						In equilibrium, all microstates are equally likely, so we obtain with
-						$ p_i = \frac{1}{g}$
+					<div style="font-size:24px">
+						<div data-markdown>
+						In equilibrium, all microstates are equally likely, so we obtain with $ p_i = \frac{1}{g}$
 
 						\begin{align}
 						 s & = -  \sum_{1}^{g} \frac{1}{g} log\ \frac{1}{g} =-log\ \frac{1}{g} \\\\
 						 & =\sigma
 						\end{align}
+						</div>
 					</div>
-
 				</section>
 				<section>
 					Shannon Entropy or Information Entropy
@@ -97,11 +93,118 @@
 
 						If $b=2$, the unit of entropy is bit.
 					</div>
+				</section>
+
+
+				<section data-background-image="http://cdn.wonderfulengineering.com/wp-content/uploads/2017/03/Coin-Flip-randomness-2.jpg">
+					<div style="width:49%;height:60%;float:left;font-size:24px;background: rgba(236, 240, 241, .8)">
+					<div data-markdown>
+						- Experiment 1 with a fair coin
+						- Number of possible events: N = 2
+						- Probability of obtaining heads:
+
+							$p_1=50\%$
+						-	Probability of obtaining tails:
+
+							$p_2=50\%$
+						-	Shannon Entropy
+
+							$H=-p_1 log_2 p_1-p_2 log_2 p_2=1(bit)$
+					</div>
+				</div>
+
+				<div style="width:49%;height:80%;float:right;font-size:24px;background: rgba(236, 240, 241, .8)">
+					<div data-markdown>
+						- Experiment 2 with a double headed coin
+						- Number of possible events: N = 1
+						- Probability of obtaining heads:
+
+							$p_1=100\%$
+						-	Shannon Entropy
+
+							$H=-p_1 log_2 p_1=0 (bits)$
+					</div>
+				</div>
 
 				</section>
 
-				<section data-background-image="https://amazingslider.com/wp-content/uploads/2012/12/dandelion.jpg">
-					<h2>Image</h2>
+				<section data-background-color="#EEEEEE">
+					<div style="width:49%;height:70%;float:left;font-size:32px">
+						<div data-markdown style="text-align:left">
+							After throwing a fair coin...
+
+							We have obtained 1 bit of information.
+
+							Or, uncertaintity has reduced by 1 bit.
+
+							While, aftering throwing a double headed coin...
+
+							We gained nothing.
+
+						</div>
+						<div style="text-align:left;color:red">
+							Shannon Entropy quantifies information!
+						</div>
+					</div>
+
+					<img  width="50%" src="http://ahmedalkiremli.com/wp-content/uploads/2014/09/Learn-Ahmed-Al-Kiremli.jpg" style="border:5" align="right">
+				</section>
+
+				<section>
+
+					<div data-markdown style="font-size:26px;text-align:left">
+						Shannon Entropy can measure how much information is produced on the average for each letter of a text in the natural language.
+
+						Findings:
+
+						1.	For 27 characters (space included) with equal probability
+							*	$H=4.75 \ (bits\ per\ character)$
+							*	Maximum of information gained per character, theoretically
+
+						2.	In consideriation of probability unbalance and written convention
+							*	$H=0.6 \sim 1.3 \ (bits\ per\ character)$
+							*	Experimentally, based on the ability of human subjects to guess successive characters in text
+
+
+					</div>
+				</section>
+
+				<section>
+					<div data-markdown style="font-size:26px">
+						# Applications
+
+						1.	Understanding natural language
+						2.	Findling more efficient encoding method
+						3.	Data compression
+						4.	Error detection
+					</div>
+				</section>
+
+				<section >
+					<div data-markdown style="width:60%;float:left;font-size:20px;text-align:left">
+						### Reference
+						[1].	A mathematical Theory of Communication, C.E. Shannon.
+
+						[2].	Prediction and Entropy of Printed English, C.E. Shannon.
+
+						[3].	Entropy(information theory), Wikipedia.
+
+						[4].	Entropy (statistical thermodynamics), Wikipedia.
+
+						[5].	[Entropy and Redundancy in English](http://people.seas.harvard.edu/~jones/cscie129/papers/stanford_info_paper/entropy_of_english_9.htm).
+
+						[6].	 Information Theory, Claude Shannon, Entropy, Redundancy, Data Compression & Bits, [YouTube](https://www.youtube.com/watch?v=JnJq3Py0dyM&t=434s).
+
+						### Acknowledgement
+						Online presentation based on [reveal.js](https://github.com/hakimel/reveal.js), an open-source html presentation framework.
+
+						Follow me on [Github](https://github.com/ustcllh).
+
+
+					</div>
+					<div style="width:40%;float:right;top:90%">
+					<img style="border:0" src="https://www.drupal.org/files/thanks.gif">
+				</div>
 				</section>
 			</div>
 		</div>
@@ -118,6 +221,7 @@
 					mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
 					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
 				},
+
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [

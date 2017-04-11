@@ -1,0 +1,12 @@
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 10px;
+  }
+#bot {
+  position: fixed;
+  bottom: 20%;
+}
