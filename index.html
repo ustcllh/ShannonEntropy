@@ -25,12 +25,33 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown >
+				<section data-markdown data-background-image="https://i.ytimg.com/vi/IoJ3KZ0HDJ0/maxresdefault.jpg" data-background-color="#222222">
 					<script type="text/template">
 						# Shannon Entropy
 						Lihan Liu
-						
+
 					</script>
+				</section>
+				<section data-background-image="http://www.theblaze.com/wp-content/uploads/2015/06/matrix.jpg" >
+					<div style="font-size:28px;background: rgba(236, 240, 241, .95)">
+					<div data-markdown>
+						## motivation
+
+						### binary model systems
+
+						An element of the system can be any site capable of two states, labeled as yes or no, red of blue, occupied or unoccupied.
+
+						State of magnets
+						$\uparrow \downarrow \downarrow \downarrow \uparrow \uparrow \downarrow \uparrow \downarrow ...$
+
+						State of binary bit flow
+						$01010000111000...$
+
+					</div>
+					<div style="color:red;font-size:32px">
+						 Question: Can digital data be treated with statistical mechanics?
+					</div>
+				</div>
 				</section>
 				<section data-background-color="#222222">
 					<div style="float:left;width:50%">
@@ -55,9 +76,9 @@
 				</section>
 
 				<section>
-					<h6>Entropy in Statistical Thermodynamics</h6>
-					<div>
-					<div style="float:left;width:49%;font-size:24px">
+					<h6 >Entropy in Statistical Thermodynamics</h6>
+					<div >
+					<div style="float:left;width:49%;font-size:26px">
 						<div data-markdown style="text-align:center">
 							Boltzmann entropy formula
 
@@ -66,7 +87,7 @@
 							In Boltzmann's definition, entropy is a measure of the number of possible microstates of a system in **thermodynamic equilibrium**.
 						</div>
 					</div>
-					<div style="float:right;width:49%;font-size:24px">
+					<div style="float:right;width:49%;font-size:26px">
 						<div data-markdown style="text-align:center" >
 						Gibbs entropy formula
 
@@ -75,9 +96,10 @@
 						A general form, used to identify the entropy of a system. The microstates of such a thermodynamic system are **not equally probable**.
 						</div>
 					</div>
-					<div style="font-size:24px">
-						<div data-markdown>
-						In equilibrium, all microstates are equally likely, so we obtain with $ p_i = \frac{1}{g}$
+					<div style="clear:both;width:100%;font-size:26px">
+						<div data-markdown style="text-align:center">
+						In equilibrium, all microstates are equally likely, so we obtain with
+						$ p_i = \frac{1}{g}$
 
 						\begin{align}
 						 s & = -  \sum_{1}^{g} \frac{1}{g} log\ \frac{1}{g} =-log\ \frac{1}{g} \\\\
@@ -85,6 +107,7 @@
 						\end{align}
 						</div>
 					</div>
+</div>
 				</section>
 				<section>
 					Shannon Entropy or Information Entropy
@@ -152,7 +175,7 @@
 
 				<section>
 
-					<div data-markdown style="font-size:26px;text-align:left">
+					<div data-markdown style="float:left;width:60%;font-size:24px;text-align:left">
 						Shannon Entropy can measure how much information is produced on the average for each letter of a text in the natural language.
 
 						Findings:
@@ -161,25 +184,82 @@
 							*	$H=4.75 \ (bits\ per\ character)$
 							*	Maximum of information gained per character, theoretically
 
-						2.	In consideriation of probability unbalance and written convention
-							*	$H=0.6 \sim 1.3 \ (bits\ per\ character)$
-							*	Experimentally, based on the ability of human subjects to guess successive characters in text
+						2.	For 27 characters (space included) with different letter frequency
+								*	$H=4.09 \ (bits\ per\ character)$
+								*	neglect written conventions such as prefix, surfix (un-,in-,-ed,-tion)
 
-
+						Data: [Letter Distribution](http://www.macfreek.nl/memory/Letter_Distribution)
 					</div>
+					<div style="float:right;width:40%">
+					<img src="img/frequency_table.png">
+					<img src="img/frequency_hist.png">
+				</div>
+
 				</section>
 
 				<section>
-					<div data-markdown style="font-size:26px">
-						# Applications
+					<div data-markdown style="float:left;width:60%;font-size:26px;text-align:left">
+						In consideriation of probability unbalance and written convention
 
-						1.	Understanding natural language
-						2.	Findling more efficient encoding method
-						3.	Data compression
-						4.	Error detection
+						*	$H=0.6 \sim 1.3 \ (bits\ per\ character)$
+						*	Experimentally, based on the ability of human subjects to guess successive characters in text
+
+						Imformation Redundancy: Language may not be efficient enough.
+						To make it more effective:
+
+						1.	Finding more efficient encoding method
+						2.	Data compression
 					</div>
+					<div style="float:right;width:40%">
+					<img style="border:0" src="http://telestreamblog.telestream.net/wp-content/uploads/2014/12/shutterstock_171118730.jpg">
+				</div>
+
 				</section>
 
+				<section>
+
+
+				<div style="float:right;width:40%">
+				<img style="border:0" src="http://lqcc.ustc.edu.cn/zky/public/inc/editer/attached/image/20150407/20150407115107_51064.jpg">
+			</div>
+			<div style="float:left;width:60%">
+				<h6> Maxwell's Demon</h6>
+				<div data-markdown style="font-size:24px;text-align:left">
+					Maxwell's demon is a thought experiment created by James Clerk Maxwell. A demon controls a small door between two chambers of gas.
+
+					As individual gas molecules approach the door, the demon quickly opens and shuts the door so that fast molecules pass into the other chamber, while slow molecules remain in the first chamber.
+
+					Because faster molecules are hotter, the demon's behavior causes one chamber to warm up as the other cools, thus decreasing entropy and violating the Second Law of Thermodynamics.
+
+					Wikipedia: [Maxwell's demon](https://en.wikipedia.org/wiki/Maxwell%27s_demon)
+
+				</div>
+			</div>
+</section>
+
+<section >
+	<div style="float:right;width:40%">
+	<img style="border:0" src="https://real.social/wp-content/uploads/2015/01/Not-free.jpg">
+</div>
+
+<div style="float:left;width:60%">
+	<h6>INFORMATION NOT FREE</h6>
+	<div data-markdown style="font-size:24px;text-align:left">
+		To deterine whether to let a molecule through, the demon must:
+
+		1.	acquire information
+		2.	discard or store
+		3.	erase (thermodynamically irreversible)
+
+		The measurement process comsumes energy, also increases entropy.
+
+		Furthermore, **Landauer's principle** quantifies the entropy increase and release of heat due to manipulation of information.
+
+		But that's another story...
+	</div>
+</div>
+
+</section>
 				<section >
 					<div data-markdown style="width:60%;float:left;font-size:20px;text-align:left">
 						### Reference
